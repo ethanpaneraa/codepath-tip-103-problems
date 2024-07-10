@@ -66,6 +66,8 @@ def trap(height):
 
     # Initialize left_max and right_max to 0
     # these variables will keep track of the maximum height of the left and right walls
+
+    # the idea is to keep 
     left_max = 0
     right_max = 0
 
@@ -179,7 +181,7 @@ def is_palindrome(str1):
 
     # While left is less than right
     while left < right:
-        # If the character at index left is not alphanumeric, increment left by 1
+        # If the character at, index left is not alphanumeric, increment left by 1
         if not str1[left].isalnum():
             left += 1
         # If the character at index right is not alphanumeric, decrement right by 1
