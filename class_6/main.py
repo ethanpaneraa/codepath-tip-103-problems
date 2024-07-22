@@ -52,13 +52,19 @@ from collections import deque
 
 
 def updateMatrix(mat):
+    ## Initialize queue with all 0s and distances with 0 for those cells
     m, n = len(mat), len(mat[0])
+
+    # Initialize the distance matrix with -1
     dist = [[-1] * n for _ in range(m)]
     q = deque()
 
     # Initialize queue with all 0s and distances with 0 for those cells
+    # iterate through the matrix and add all 0s to the queue
+    # set the distance of 0s to 0
     for i in range(m):
         for j in range(n):
+            # If the cell contains 0, add it to the queue and set its distance to 0
             if mat[i][j] == 0:
                 q.append((i, j))
                 dist[i][j] = 0
