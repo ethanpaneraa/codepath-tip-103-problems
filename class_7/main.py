@@ -226,6 +226,7 @@ Create an adjacency list to represent the graph.
 Use a priority queue to implement Dijkstra's algorithm to find the shortest path from the source node to all other nodes.
 Keep track of the shortest time it takes to reach each node.
 If all nodes are reached, return the maximum time taken to reach any node. If not all nodes are reachable, return -1.
+
 R - Review:
 
 All test cases passed when ran on LeetCode.
@@ -240,6 +241,9 @@ import heapq
 def networkDelayTime(times, n, k):
     # Create the adjacency list
     graph = defaultdict(list)
+
+    # iterate through the times and populate the adjacency list
+    # for each node, store the neighbor and the time taken to reach it
     for u, v, w in times:
         graph[u].append((v, w))
     # Min-heap priority queue to implement Dijkstra's algorithm
@@ -260,6 +264,7 @@ def networkDelayTime(times, n, k):
         return max(dist.values())
     else:
         return -1
+
 #Test cases
 network_delay_time_test_cases = [
 ([[2,1,1],[2,3,1],[3,4,1]], 4, 2, 2),
