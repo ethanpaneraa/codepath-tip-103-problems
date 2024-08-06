@@ -321,7 +321,7 @@ Sum up the calculated numbers for all unique answers.
 R - Review:
 
 Ensure that the counting logic correctly handles the groups of rabbits.
-Verify that the calculation correctly handles each group size.
+Verify that the calculation ccorrectly handles each group size.
 
 E - Evaluate:
 
